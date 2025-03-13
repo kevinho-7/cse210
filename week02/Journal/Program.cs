@@ -6,7 +6,6 @@ class Program
     {
         ShowMenu menu = new ShowMenu();
         menu.DisplayMenu();
-        
        
     }
-}
+}   

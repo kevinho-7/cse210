@@ -1,4 +1,4 @@
-public class ShowMenu()
+public class ShowMenu
 {
     string[] menu = { "1. Write", "2. Display", "3. Load", "4. Save", "5. Quit" };
 
@@ -22,9 +22,14 @@ public class ShowMenu()
 
             choice = getChoise;
 
+            Journal journal = new Journal();
+            PromptGenarator prompts =  new PromptGenarator();
+            Entry entries = new Entry();
+
             if (getChoise == "1")
             {
-                Console.WriteLine("Write");
+                Console.WriteLine(prompts.GetRandomPrompt());
+                Console.Write("> "); 
             }
                 else if (getChoise == "2")
             {
@@ -38,6 +43,6 @@ public class ShowMenu()
             {
                 Console.WriteLine("Save");
             }
-        } 
+        }   
     }                                    
 }
