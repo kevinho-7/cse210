@@ -1,6 +1,6 @@
-public class PromptGenarator    
+public class  PromptGenarator
 {
-    public List<string> _prompts = new List<string>
+    public List<string> _journalPrompts = new List<string>
         {
             "What made me smile today?",
             "What was a small moment of gratitude I experienced?",
@@ -17,8 +17,8 @@ public class PromptGenarator
 
     public string GetRandomPrompt()
     {
-        Random randomGenerator = new Random();
-        int index = randomGenerator.Next(_prompts.Count);
-        return _prompts[index];
+        Random random = new Random();
+        int index = random.Next(_journalPrompts.Count);
+        return _journalPrompts[index];
     }
 }

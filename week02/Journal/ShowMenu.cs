@@ -28,12 +28,16 @@ public class ShowMenu
 
             if (getChoise == "1")
             {
-                Console.WriteLine(prompts.GetRandomPrompt());
+                string randomPrompt = prompts.GetRandomPrompt();
+                Console.WriteLine(randomPrompt);
+                entries._promptText = randomPrompt;
                 Console.Write("> "); 
+                entries._entryText = Console.ReadLine();
             }
                 else if (getChoise == "2")
             {
-                Console.WriteLine("Display");
+                
+                journal.DisplayAll();
             }
                 else if (getChoise == "3")
             {
