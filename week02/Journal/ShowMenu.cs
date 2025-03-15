@@ -29,6 +29,7 @@ public class ShowMenu
 
             if (getChoise == "1")
             {
+                Console.WriteLine();
                 string randomPrompt = prompts.GetRandomPrompt();
                 Console.WriteLine(randomPrompt);
                 entries._promptText = randomPrompt;
@@ -38,15 +39,24 @@ public class ShowMenu
             }
                 else if (getChoise == "2")
             {
+                Console.WriteLine();
                 journal.DisplayAll();
             }
                 else if (getChoise == "3")
             {
-                Console.WriteLine("Load");
+                Console.WriteLine();
+                Console.WriteLine("What's the filename?");
+                Console.Write("> "); 
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
                 else if (getChoise == "4")
             {
-                Console.WriteLine("Save");
+                Console.WriteLine();
+                Console.WriteLine("What's the filename?");
+                Console.Write("> "); 
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
             }
         }   
     }                                    
