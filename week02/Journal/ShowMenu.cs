@@ -6,6 +6,8 @@ public class ShowMenu
     {
         string choice = "";
 
+        Journal journal = new Journal();
+
         while(choice != "5")
         {
 
@@ -22,7 +24,6 @@ public class ShowMenu
 
             choice = getChoise;
 
-            Journal journal = new Journal();
             PromptGenarator prompts =  new PromptGenarator();
             Entry entries = new Entry();
 
@@ -33,10 +34,10 @@ public class ShowMenu
                 entries._promptText = randomPrompt;
                 Console.Write("> "); 
                 entries._entryText = Console.ReadLine();
+                journal.AddEntry(entries);
             }
                 else if (getChoise == "2")
             {
-                
                 journal.DisplayAll();
             }
                 else if (getChoise == "3")
