@@ -10,9 +10,25 @@ public class Fraction
         _bottom = 1;
     }
 
-    public Fraction(int bottom)
+    public Fraction(int wholeNumber)
     {
-        _top = 1;
+        _top = wholeNumber;
+        _bottom = 1;
+    }
+
+    public Fraction(int top, int bottom)
+    {
+        _top = top;
         _bottom = bottom;
+    }
+      public string GetFractionString()
+    {
+        string text = $"{_top}/{_bottom}";
+        return text;
+    }
+
+    public double GetDecimalValue()
+    {
+        return (double)_top / (double)_bottom;
     }
 }
