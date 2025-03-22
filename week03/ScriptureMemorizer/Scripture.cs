@@ -9,7 +9,7 @@ public class Scripture
 
         string[] wordsArr = text.Split(" ");
 
-        foreach(string word in wordsArr)
+        foreach (string word in wordsArr)
         {
             _words.Add(new Word(word));
         }
@@ -18,18 +18,26 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         Random random = new Random();
-        numberToHide = random.Next(_words.Count);
+        int hiddenCount = 0;
+
+        while (hiddenCount < numberToHide && _words.Any(w => !w.IsHidden()))
+        {
+            int index = random.Next(_words.Count); 
+            if (!_words[index].IsHidden())
+            {
+                _words[index].Hide();
+                hiddenCount++;
+            }
+        }
     }
 
     public string GetDisplayText()
     {
-        return "";
+        return string.Join(" ", _words.Select(w => w.GetDisplayText()));
     }
 
     public bool IsCompletelyHidden()
     {
-        return true;
+        return _words.All(w => w.IsHidden());
     }
-
-     
 }
