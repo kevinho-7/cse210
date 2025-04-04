@@ -29,7 +29,9 @@ class Program
 
             if (choice == "1")
             {
-                Console.WriteLine("1");
+                Activity ac1 = new Activity("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.", 30);
+                // ac1.ShowSpinner(5);
+                ac1.ShowCountDown(15);
                 // BreathingActivity breathingActivity = new BreathingActivity();
                 // breathingActivity.Start();
             }
