@@ -44,11 +44,14 @@ public class Activity
     }
     public void ShowCountDown(int seconds)
     {
-        for (int i = seconds; i > 0; i--)
+        _duration = seconds;
+        for (int i = _duration; i > 0; i--)
         {
-            Console.Write($"\r{i}");
+            string formatted = i.ToString().PadLeft(3);
+            Console.Write($"\r{formatted}");
             Thread.Sleep(1000); 
         }
+        Console.Write("\r   \r"); 
         Console.WriteLine();
     }
 }
