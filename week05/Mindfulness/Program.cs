@@ -16,8 +16,8 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("Welcome to the Mindfulness Program!\n");
-            Console.WriteLine("Please select an activity from the menu below:");
+            Console.WriteLine("--Welcome to the Mindfulness Program!--\n");
+            Console.WriteLine("Menu options:");
             foreach (string item in menu)
             {
                 Console.WriteLine(item);
