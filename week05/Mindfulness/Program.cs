@@ -37,23 +37,31 @@ class Program
                 );
                 b1.Run();
             }
+
             else if (choice == "2")
             {
                 Console.WriteLine("2");
-                // ReflectingActivity reflectingActivity = new ReflectingActivity();
-                // reflectingActivity.Start();
+                ListingActivity listing = new ListingActivity(
+                    "Listing",
+                    "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.",
+                    0
+                );
+                listing.Run();
             }
+
             else if (choice == "3")
             {
                 Console.WriteLine("3");
                 // ListingActivity listingActivity = new ListingActivity();
                 // listingActivity.Start();
             }
+
             else if (choice == "4")
             {
                 Console.WriteLine("Goodbye!");
                 break;
             }
+            
             else
             {
                 Console.WriteLine("--Invalid choice. Please try again.--\n");

@@ -52,12 +52,11 @@ public class Activity
     }
     public void ShowCountDown(int seconds)
     {
-        _duration = seconds;
-        for (int i = _duration; i > 0; i--)
+        for (int i = seconds; i > 0; i--)
         {
-            Console.Write(i);
+            Console.Write($"  {i} ");
             Thread.Sleep(1000);
-            Console.Write("\b \b");    
+            Console.Write("\b\b\b\b"); // apaga até 2 dígitos e espaço
         }
-    }   
+    }
 }
