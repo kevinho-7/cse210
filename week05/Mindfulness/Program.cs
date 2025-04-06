@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         string[] menu = new string[4] 
         {
             "   1. Start breathing activity",
@@ -29,11 +30,12 @@ class Program
 
             if (choice == "1")
             {
-                Activity ac1 = new Activity("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.", 30);
-                // ac1.ShowSpinner(5);
-                ac1.ShowCountDown(15);
-                // BreathingActivity breathingActivity = new BreathingActivity();
-                // breathingActivity.Start();
+                BreathingActivity b1 = new BreathingActivity(
+                    "Breathing", 
+                    "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.",
+                    0
+                );
+                b1.Run();
             }
             else if (choice == "2")
             {

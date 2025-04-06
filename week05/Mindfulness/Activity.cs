@@ -15,24 +15,32 @@ public class Activity
         _duration = duration;
     }
 
+    public Activity(string name, string description)
+    {
+        _name = name;
+        _description = description;
+        _duration = 0;
+    }
+
     public void DisplayStartingMessage()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to the {_name} activity!");
+        Console.WriteLine();
         Console.WriteLine(_description);
+        Console.WriteLine();
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("Well done!");
-        Console.WriteLine($"You have completed the {_name} activity.");
+        Console.WriteLine($"You have completed the {_name} activity!!");
     }
 
     public void ShowSpinner(int seconds)
     {
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         int index = 0;
-
-        Console.WriteLine("Get ready...");
 
         while (DateTime.Now < endTime)
         {
@@ -47,11 +55,9 @@ public class Activity
         _duration = seconds;
         for (int i = _duration; i > 0; i--)
         {
-            string formatted = i.ToString().PadLeft(3);
-            Console.Write($"\r{formatted}");
-            Thread.Sleep(1000); 
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");    
         }
-        Console.Write("\r   \r"); 
-        Console.WriteLine();
-    }
+    }   
 }
