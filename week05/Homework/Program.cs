@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks.Dataflow;
 
 class Program
 {
@@ -6,18 +7,15 @@ class Program
     {
         Console.WriteLine();
 
-        Assignment assignment1 = new Assignment();
-        assignment1.SetStudentName("Kevin G. Ferreira");
-        assignment1.SetTopic("Math");
-        Console.WriteLine(assignment1.GetSummary());
+        MathAssignment math1 = new MathAssignment("Garro", "Fractions", "8.0", "8-10");
+        Console.WriteLine(math1.GetSummary());
+        Console.WriteLine(math1.GetHomeworkList());
 
         Console.WriteLine();
 
-        Assignment assignment2 = new Assignment();
-        assignment2.SetStudentName("Jobert");
-        assignment2.SetTopic("Portuguese");
-        Console.WriteLine(assignment2.GetSummary());
-        
-        
+        WritingAssignment write1 = new WritingAssignment("Rodrigo","European History","The Causes of World War II by Mary Waters");
+        Console.WriteLine(write1.GetSummary());
+        Console.WriteLine(write1.GetWritingInformation());
+                    
     }
 } 
