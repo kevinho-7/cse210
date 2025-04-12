@@ -38,11 +38,11 @@ public class SimpleGoal : Goal
     {
         if (IsComplete())
         {
-            return $"[X] {_shortName} ({_description}) - {_points} points";
+            return $"[X] {_shortName} ({_description})";
         }
         else
         {
-            return $"[ ] {_shortName} ({_description}) - {_points} points";
+            return $"[ ] {_shortName} ({_description})";
         }
     }
 }

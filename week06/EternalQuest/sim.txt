@@ -1,0 +1,6 @@
+7002750
+Simple Goal: asasa, adlkaldk, 50, True
+Simple Goal: aksakska, eaemnidneidnnjek, 7000000, True
+Simple Goal: askjaksja, nfuhrweiujbeirvb, 400, True
+Eternal Goal: opa, aopa222, 50, False
+Checklist Goal: sim, sla, 900, 2, 2, 400, True
