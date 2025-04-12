@@ -36,6 +36,13 @@ public class SimpleGoal : Goal
 
     public override string GetDetailsString()
     {
-        return $"[ ] {_shortName} ({_description}) - {_points} points";
+        if (IsComplete())
+        {
+            return $"[X] {_shortName} ({_description}) - {_points} points";
+        }
+        else
+        {
+            return $"[ ] {_shortName} ({_description}) - {_points} points";
+        }
     }
 }
